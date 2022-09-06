@@ -13,11 +13,11 @@
     function reloadMessages() {
       messages.innerHTML = "";
       for (i=0;i<cloud_messages.length;i++) {
-        messages.innerHTML += '<div class="message">' + cloud_messages[i] + "</div>';
+        messages.innerHTML += '<div class="message">' + cloud_messages[i] + "</div><br>';
       }
     }
-    function send(message) {
-      cloud_messages.push(username + ": " + message);
+    function send() {
+      cloud_messages.push(username + ": " + textinput.value);
     }
   </script>
 </head>
@@ -27,7 +27,7 @@
     </div>
     <div id="messaging">
       <input type="text" placeholder="Enter your message here!" id="textinput"/>
-      <button type="button" id="send">Send</button>
+      <button type="button" onclick="send()" id="send">Send</button>
     </div>
   </div>
 </body>
