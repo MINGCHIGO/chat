@@ -2,16 +2,13 @@
 <html>
 <head>
   <script src="https://kihtrak.com/cloud_variable/cloudify.min.js"></script>
-  <script type="module">
-    import { io } from "https://cdn.socket.io/4.4.1/socket.io.esm.min.js";
-    const socket = io();
-  </script>
   <script>
     var cloud_messages;
     var chat = document.getElementById("chat");
     var messages = document.getElementById("messages");
     var textinput = document.getElementById("textinput");
     var send = document.getElementById("send");
+    var username = "User";
     
     function reloadMessages() {
       messages.innerHTML = "";
@@ -19,11 +16,14 @@
         messages.innerHTML += '<div class="message">' + cloud_messages[i] + "</div>';
       }
     }
+    function send(message) {
+      cloud_messages.push(username + ": " + message);
+    }
   </script>
 </head>
 <body>
   <div id="chat">
-    <div id="messages"> 
+    <div id="messages">
     </div>
     <div id="messaging">
       <input type="text" placeholder="Enter your message here!" id="textinput"/>
