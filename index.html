@@ -4,7 +4,7 @@
   <script src="https://kihtrak.com/cloud_variable/cloudify.min.js">
   </script>
   <script>
-    var cloud_messages;
+    var cloud_msg;
     var chat = document.getElementById("chat");
     var messages = document.getElementById("messages");
     var textinput = document.getElementById("textinput");
@@ -13,12 +13,12 @@
     
     function reloadMessages() {
       document.getElementById("messages").innerHTML = "";
-      for (i=0;i<cloud_messages.length;i++) {
-        document.getElementById("messages").innerHTML += '<div class="message">' + cloud_messages[i] + "</div><br>";
+      for (i=0;i<cloud_msg.length;i++) {
+        document.getElementById("messages").innerHTML += '<div class="message">' + cloud_msg[i] + "</div><br>";
       }
     }
     function send() {
-      cloud_messages.push(username + ": " + document.getElementById("textinput").value);
+      cloud_msg.push(username + ": " + document.getElementById("textinput").value);
     }
     setInterval(reloadMessages, 10);
   </script>
