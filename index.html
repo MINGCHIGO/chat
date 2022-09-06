@@ -3,6 +3,17 @@
 <head>
   <script src="https://kihtrak.com/cloud_variable/cloudify.min.js">
   </script>
+</head>
+<body>
+  <div id="chat">
+    <div id="messages">
+      <div class="message">Start of Chat</div>
+    </div>
+    <div id="messaging">
+      <input type="text" placeholder="Enter your message here!" id="textinput"/>
+      <button type="button" onclick="send();" id="sendbtn">Send</button>
+    </div>
+  </div>
   <script>
     var cloud_msg;
     var username = "User";
@@ -23,16 +34,5 @@
     }
     setInterval(reloadMessages, 10);
   </script>
-</head>
-<body>
-  <div id="chat">
-    <div id="messages">
-      <div class="message">Start of Chat</div>
-    </div>
-    <div id="messaging">
-      <input type="text" placeholder="Enter your message here!" id="textinput"/>
-      <button type="button" onclick="send();" id="sendbtn">Send</button>
-    </div>
-  </div>
 </body>
 </html>
