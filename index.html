@@ -19,7 +19,7 @@
     function send() {
       cloud_messages.push(username + ": " + document.getElementById("textinput").value);
     }
-    reloadMessages()
+    setInterval(reloadMessages, 10);
   </script>
 </head>
 <body>
