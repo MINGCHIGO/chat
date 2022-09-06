@@ -5,11 +5,12 @@
   </script>
   <script>
     var cloud_msg;
+    var username = "User";
+    cloud_msg.push(username + " has joined the chat.")
     var chat = document.getElementById("chat");
     var messages = document.getElementById("messages");
     var textinput = document.getElementById("textinput");
     var sendbtn = document.getElementById("sendbtn");
-    var username = "User";
     
     function reloadMessages() {
       document.getElementById("messages").innerHTML = "";
