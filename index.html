@@ -11,9 +11,9 @@
     var username = "User";
     
     function reloadMessages() {
-      messages.innerHTML = "";
+      document.getElementById("messages").innerHTML = "";
       for (i=0;i<cloud_messages.length;i++) {
-        messages.innerHTML += '<div class="message">' + cloud_messages[i] + "</div><br>";
+        document.getElementById("messages").innerHTML += '<div class="message">' + cloud_messages[i] + "</div><br>";
       }
     }
     function send() {
